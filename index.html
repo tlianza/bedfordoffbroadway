@@ -28,6 +28,7 @@
             <li><a href="#auditions">Auditions</a></li>
             <li><a href="#nowplaying">Now Playing</a></li>
             <li><a href="#coming">Coming Attractions</a></li>
+            <li><a href="#galleries">Image Galleries</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -46,7 +47,7 @@
       </p>
       <p>
         <h4>Directions to the Bedford Old Town Hall are as follows</h4>
-        
+
         <p><strong>From the North:</strong> Follow I-293 South to the Bedford exit which is Route 101 West,</p>
 
         <p><strong>From the South:</strong> Follow I-93 North or the Everett Turnpike to the Bedford exit which is Route 101 west.</p>
@@ -101,6 +102,14 @@ Parking is not allowed on the street. There are three parking levels on Meetingh
       </div>
     </div>
 
+    <div class="container" id="galleries">
+      <h2><span class="glyphicon glyphicon-bullhorn"></span> Image Galleries</h2>
+      <ul>
+        <li><a href="galleries/dress rehersal images/index.html" class="gallery_windowed">Dress Rehearsal</a></li>
+      </ul>
+      
+    </div>
+
     <div class="container" id="contact">
       <h2><span class="glyphicon glyphicon-bullhorn"></span> Contact Us</h2>
 
@@ -116,12 +125,21 @@ Parking is not allowed on the street. There are three parking levels on Meetingh
       <p>&nbsp;</p>
     </div>
 
-
-
-
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.10.2.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+
+        //any link with a class of 'gallery_windowed' will be modified to open in the small window instead
+        $('.gallery_windowed').click(function(e){
+          e.preventDefault();
+          window.open($(e.currentTarget).attr('href'), 'bob_gallery_window',  
+            "width=600,height=670,resizable,scrollbars=yes,status=0");
+        });
+
+      });
+    </script>
   </body>
 </html>
